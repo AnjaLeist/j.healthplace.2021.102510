@@ -15,8 +15,8 @@ This work was supported by the Canadian Social Sciences and Humanities Research 
 
 Code for central regressions exported from the NORC Data Enclave
 
-/*
-cognch: change in cognitive functioning through time
+
+`cognch`: change in cognitive functioning through time
 
 sdch: change in census tract-level socioeconomic disadvantage through time
 
@@ -62,10 +62,10 @@ netch: change in close social network size through time
 
 physactch: change in extent of rigorous physical activity through time
 
-*/
+
 
 *First Two OLS Regressions
-
+```
 mi estimate: regress cognch sdch i.gender i.ethgrp if ansamp==1 & dvnonmiss==1 ///  [pweight= fnlwght], vce(cluster tractw2)
 
 mi estimate: regress cognch sdch i.gender i.ethgrp popdens i.msa age i.married i.parent ///
@@ -109,3 +109,4 @@ i.educ i.physhlth function i.work i.reslength i.tractch i.wave1, regress) ///
 i.educ i.physhlth function i.work i.reslength i.tractch i.wave1, regress) ///
 
 if ansamp==1 & dvnonmiss==1 [pweight= fnlwght], vce(cluster tractw2)
+```
